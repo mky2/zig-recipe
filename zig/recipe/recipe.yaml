@@ -1,0 +1,40 @@
+context:
+  version: 0.15.1
+
+package:
+  name: zig
+  version: ${{ version }}
+
+source:
+  url: https://ziglang.org/download/${{ version }}/zig-bootstrap-${{ version }}.tar.xz
+  sha256: 4c0cfbcf12da144955761ca43f89e3c74956bce978694fc1d0a63555f5c0a199
+
+build:
+  number: 0
+  script:
+    - export CMAKE_GENERATOR=Ninja
+    - if: linux and aarch64
+      then: ./build aarch64-linux-musl baseline
+    - if: linux and x86_64
+      then: ./build x86_64-linux-musl baseline
+    - if: osx and arm64
+      then: ./build aarch64-macos-none apple_a14
+    - if: osx and x86_64
+      then: ./build x86_64-macos-none baseline
+    - if: win and aarch64
+      then: ./build aarch64-windows-gnu baseline
+    - if: win and x86_64
+      then: ./build x86_64-windows-gnu baseline
+
+requirements:
+  build:
+    - ${{ compiler('cxx') }}
+    - ninja
+    - cmake
+    - python >=3
+
+about:
+  homepage: https://ziglang.org/
+  license: MIT
+  summary: Zig is a general-purpose programming language and toolchain for maintaining robust, optimal and reusable software.
+  repository: https://github.com/ziglang/zig
