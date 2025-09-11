@@ -1,3 +1,5 @@
+c_compiler:
+  - clangxx
 cxx_compiler:
   - clangxx
 c_stdlib_version:  # [unix]
