@@ -1,3 +1,5 @@
+c_compiler:
+- clangxx
 c_stdlib:
 - vs
 channel_sources:
