@@ -28,7 +28,6 @@ build:
 
 requirements:
   build:
-    - ${{ stdlib('c') }}
     - ${{ compiler('cxx') }}
     - ninja
     - cmake
