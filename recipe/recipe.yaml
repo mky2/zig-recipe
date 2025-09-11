@@ -31,9 +31,10 @@ requirements:
     - ${{ stdlib('c') }}
     - ${{ compiler('cxx') }}
     - ninja
-    - cmake
+    - cmake >=3.19
     - python >=3
     - libcxx
+    - llvmdev
   host:
     - libcxx
     - llvmdev
