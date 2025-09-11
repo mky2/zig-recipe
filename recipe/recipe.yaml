@@ -33,9 +33,9 @@ requirements:
     - ninja
     - cmake
     - python >=3
-    - libcxx ${{ cxx_compiler_version }}
+    - libcxx
   host:
-    - libcxx ${{ cxx_compiler_version }}
+    - libcxx
 
 about:
   homepage: https://ziglang.org/
