@@ -15,7 +15,7 @@ jobs:
       - uses: prefix-dev/setup-pixi@v0.9.0
       - name: Build
         shell: bash
-        run: pixi run build-locally
+        run: pixi run build-locally linux_64_
   build:
     runs-on: ubuntu-latest
     steps:
