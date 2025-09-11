@@ -36,6 +36,7 @@ requirements:
     - libcxx
   host:
     - libcxx
+    - llvmdev
 
 about:
   homepage: https://ziglang.org/
