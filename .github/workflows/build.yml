@@ -27,4 +27,4 @@ jobs:
       - name: Run
         shell: bash
         run: |
-          pixi run build_osx_arm64_
+          pixi run build-osx_arm64_
