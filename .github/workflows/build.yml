@@ -8,9 +8,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  build-locally:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: prefix-dev/setup-pixi@v0.9.0
+      - name: Build
+        shell: bash
+        run: pixi run build-locally
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v5
       - uses: prefix-dev/setup-pixi@v0.9.0
