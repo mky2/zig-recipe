@@ -28,12 +28,12 @@ build:
 
 requirements:
   build:
-    - ${{ compiler('c') }}
     - ${{ compiler('cxx') }}
-    - ${{ stdlib("c") }}
     - ninja
     - cmake
     - python >=3
+  host:
+    - libcxx
 
 about:
   homepage: https://ziglang.org/
