@@ -29,8 +29,8 @@ build:
 requirements:
   build:
     - ${{ stdlib('c') }}
-    # - ${{ compiler('cxx') }}
-    - clangxx_linux-64
+    - ${{ compiler('cxx') }}
+    # - clangxx_linux-64
     - ninja
     - cmake >=3.19
     - python >=3
