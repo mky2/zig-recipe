@@ -29,15 +29,12 @@ build:
 requirements:
   build:
     - ${{ stdlib('c') }}
-    - ${{ compiler('cxx') }}
+    # - ${{ compiler('cxx') }}
+    - clangxx_linux-64
     - ninja
     - cmake >=3.19
     - python >=3
     - libcxx
-    - llvmdev
-  host:
-    - libcxx
-    - llvmdev
 
 about:
   homepage: https://ziglang.org/
