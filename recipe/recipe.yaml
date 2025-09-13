@@ -16,7 +16,7 @@ build:
     - if: linux and aarch64
       then: ./build aarch64-linux-musl baseline
     - if: linux and x86_64
-      then: ./build.sh
+      then: sh build.sh
     - if: osx and arm64
       then: ./build aarch64-macos-none apple_a14
     - if: osx and x86_64
