@@ -11,20 +11,20 @@ source:
 
 build:
   number: 0
-  script:
-    - export CMAKE_GENERATOR=Ninja
-    - if: linux and aarch64
-      then: ./build aarch64-linux-musl baseline
-    - if: linux and x86_64
-      then: sh build.sh
-    - if: osx and arm64
-      then: ./build aarch64-macos-none apple_a14
-    - if: osx and x86_64
-      then: ./build x86_64-macos-none baseline
-    - if: win and aarch64
-      then: ./build aarch64-windows-gnu baseline
-    - if: win and x86_64
-      then: ./build x86_64-windows-gnu baseline
+  # script:
+  #   - export CMAKE_GENERATOR=Ninja
+  #   - if: linux and aarch64
+  #     then: ./build aarch64-linux-musl baseline
+  #   - if: linux and x86_64
+  #     then: sh build.sh
+  #   - if: osx and arm64
+  #     then: ./build aarch64-macos-none apple_a14
+  #   - if: osx and x86_64
+  #     then: ./build x86_64-macos-none baseline
+  #   - if: win and aarch64
+  #     then: ./build aarch64-windows-gnu baseline
+  #   - if: win and x86_64
+  #     then: ./build x86_64-windows-gnu baseline
 
 requirements:
   build:

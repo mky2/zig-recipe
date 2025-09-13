@@ -4,6 +4,8 @@
 
 set -eu
 
+export CMAKE_GENERATOR=Ninja
+
 ROOTDIR="$(pwd)"
 ZIG_VERSION="0.15.1"
 
