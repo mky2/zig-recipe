@@ -16,14 +16,14 @@ jobs:
       - name: Build
         shell: bash
         run: pixi run build-locally linux_64_
-  linux-aarch64:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: prefix-dev/setup-pixi@v0.9.0
-      - name: Build
-        shell: bash
-        run: pixi run build-locally linux_aarch64_
+  # linux-aarch64:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v5
+  #     - uses: prefix-dev/setup-pixi@v0.9.0
+  #     - name: Build
+  #       shell: bash
+  #       run: pixi run build-locally linux_aarch64_
   # osx-arm64:
   #   runs-on: osx-latest
   #   steps:
