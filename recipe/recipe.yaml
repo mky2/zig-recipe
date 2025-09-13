@@ -29,12 +29,12 @@ build:
 requirements:
   build:
     - ${{ stdlib('c') }}
-    - ${{ compiler('cxx') }}
+    - if: linux
+      then: gxx_${{ build_platform }}
     # - clangxx_linux-64
     - ninja
     - cmake >=3.19
     - python >=3
-    - libcxx
 
 about:
   homepage: https://ziglang.org/
