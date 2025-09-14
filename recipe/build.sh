@@ -193,6 +193,7 @@ cmake --build . --target install
 # Finally, we can cross compile Zig itself, with Zig.
 cd "$ROOTDIR/zig"
 $ZIG build \
+  # --prefix "$PREFIX" \
   --prefix "$ROOTDIR/out/zig-$TARGET-$MCPU" \
   --search-prefix "$ROOTDIR/out/$TARGET-$MCPU" \
   -Dflat \

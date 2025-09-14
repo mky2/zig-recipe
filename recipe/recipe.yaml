@@ -35,6 +35,7 @@ requirements:
     - ninja
     - cmake >=3.19
     - python >=3
+    - libcxx
 
 about:
   homepage: https://ziglang.org/
