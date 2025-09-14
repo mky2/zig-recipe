@@ -30,7 +30,7 @@ requirements:
   build:
     - ${{ stdlib('c') }}
     - if: linux
-      then: clangxx_${{ build_platform }}
+      then: ${{ compiler('cxx') }}
     # - clangxx_linux-64
     - ninja
     - cmake >=3.19
