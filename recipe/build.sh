@@ -65,7 +65,6 @@ cmake --build . --target install
 mkdir -p "$ROOTDIR/out/build-zig-host"
 cd "$ROOTDIR/out/build-zig-host"
 cmake "$ROOTDIR/zig" \
-  $CMAKE_ARGS \
   -DCMAKE_INSTALL_PREFIX="$ROOTDIR/out/host" \
   -DCMAKE_PREFIX_PATH="$ROOTDIR/out/host" \
   -DCMAKE_BUILD_TYPE=Release \
@@ -92,7 +91,6 @@ cmake "$ROOTDIR/zlib" \
   -DCMAKE_RC_COMPILER="$ROOTDIR/out/host/bin/llvm-rc" \
   -DCMAKE_AR="$ROOTDIR/out/host/bin/llvm-ar" \
   -DCMAKE_RANLIB="$ROOTDIR/out/host/bin/llvm-ranlib" \
-  ${CMAKE_ARGS}
 cmake --build . --target install
 
 # Same deal for zstd.
