@@ -89,7 +89,8 @@ cmake "$ROOTDIR/zlib" \
   -DCMAKE_LINK_DEPENDS_USE_LINKER=OFF \
   -DCMAKE_RC_COMPILER="$ROOTDIR/out/host/bin/llvm-rc" \
   -DCMAKE_AR="$ROOTDIR/out/host/bin/llvm-ar" \
-  -DCMAKE_RANLIB="$ROOTDIR/out/host/bin/llvm-ranlib"
+  -DCMAKE_RANLIB="$ROOTDIR/out/host/bin/llvm-ranlib" \
+  ${CMAKE_ARGS}
 cmake --build . --target install
 
 # Same deal for zstd.
@@ -184,6 +185,7 @@ cmake "$ROOTDIR/llvm" \
   -DCLANG_BUILD_TOOLS=OFF \
   -DCLANG_INCLUDE_DOCS=OFF \
   -DCLANG_INCLUDE_TESTS=OFF \
+  -DCLANG_ENABLE_ARCMT=ON \
   -DCLANG_ENABLE_OBJC_REWRITER=ON \
   -DCLANG_TOOL_CLANG_IMPORT_TEST_BUILD=OFF \
   -DCLANG_TOOL_CLANG_LINKER_WRAPPER_BUILD=OFF \
