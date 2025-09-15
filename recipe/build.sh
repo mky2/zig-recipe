@@ -21,8 +21,8 @@ esac
 
 # FIXME: Just for testing
 TARGET="x86_64-linux-musl"
-CFLAGS=""
-CXXFLAGS=""
+# CFLAGS=""
+# CXXFLAGS=""
 
 # First build the libraries for Zig to link against, as well as native `llvm-tblgen`.
 mkdir -p "$ROOTDIR/out/build-llvm-host"
