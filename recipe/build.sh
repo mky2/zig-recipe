@@ -68,7 +68,8 @@ cmake "$ROOTDIR/zig" \
   -DCMAKE_INSTALL_PREFIX="$ROOTDIR/out/host" \
   -DCMAKE_PREFIX_PATH="$ROOTDIR/out/host" \
   -DCMAKE_BUILD_TYPE=Release \
-  -DZIG_VERSION="$ZIG_VERSION"
+  -DZIG_VERSION="$ZIG_VERSION" \
+  ${CMAKE_ARGS}
 cmake --build . --target install
 
 # Now we have Zig as a cross compiler.
